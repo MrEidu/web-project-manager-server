@@ -1,0 +1,19 @@
+{
+  "name": "web-project-manager-server",
+  "version": "1.0.0",
+  "description": "Proyecto Segundo Parcial en Web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/MrEidu/web-project-manager-server.git"
+  },
+  "author": "Arnoldo Daniel Valdez Domínguez 311006, Victor Hugo Aguilar Parra 320663, Angel Eidu Macías Sáenz 320670",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/MrEidu/web-project-manager-server/issues"
+  },
+  "homepage": "https://gitlab.com/MrEidu/web-project-manager-server#readme"
+}
