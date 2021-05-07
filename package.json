@@ -2,7 +2,12 @@
   "name": "web-project-manager-server",
   "version": "1.0.0",
   "description": "Proyecto Segundo Parcial en Web",
-  "main": "index.js",
+  "main": "app.js",
+  "keywords": [
+    "nodejs",
+    "bootstrap",
+    "express"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
