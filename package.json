@@ -4,15 +4,27 @@
   "description": "Proyecto Segundo Parcial en Web",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "export NODE_ENV=production; node ./bin/www",
+    "dev": "supervisor ./bin/www"
   },
   "dependencies": {
-    "express": "^4.7.1",
-    "body-parser": "^1.5.1",
-    "method-override": "^2.1.2",
-    "mongodb": "^3.6.5",
-    "mongoose": "~3.6.11"
-    },
+    "async": "^3.2.0",
+    "bcrypt": "^5.0.0",
+    "config": "^3.3.3",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "express-jwt": "^6.0.0",
+    "http-errors": "~1.6.3",
+    "i18n": "^0.13.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.11",
+    "mongoose-paginate-v2": "^1.3.9",
+    "morgan": "~1.9.1",
+    "pug": "^3.0.0",
+    "supervisor": "^0.12.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://gitlab.com/MrEidu/web-project-manager-server.git"
