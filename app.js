@@ -10,7 +10,7 @@ const cors = require('cors');
 
 
 const projectsRouter = require('./routes/projects');
-
+const usersRouter = require('./routes/users');
 
 
 
@@ -37,7 +37,7 @@ app.use(cors());
 
 
 app.use('/projects', projectsRouter);
-
+app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
