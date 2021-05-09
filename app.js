@@ -9,12 +9,12 @@ const config = require('config');
 const cors = require('cors');
 
 
-
+const authRouter = require('./routes/auth');
 const projectsRouter = require('./routes/project');
 const columnRouter = require('./routes/column');
 const usersRouter = require('./routes/users');
 
-
+const jwtKey = config.get('secret.key');
 
 const app = express();
 
@@ -36,8 +36,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(i18n.init);
 app.use(cors());
 
+app.use(expressJwt({
+  secret: jwtKey,
+  algorithms: ['HS256']
+}).unless({
+  path: ['/auth/signup', '/auth/login']
+}));
 
-
+app.use('/auth', authRouter);
 app.use('/projects', projectsRouter);
 app.use('/users', usersRouter);
 app.use('/column', columnRouter);
