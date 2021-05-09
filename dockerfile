@@ -1,15 +1,7 @@
-FROM node:10-alpine
-
-WORKDIR /usr/src/app
-
-ARG NODE_ENV
-ENV NODE_ENV $NODE_ENV
-
-COPY package*.json /usr/src/app/
+FROM node
+LABEL Project Manager
+RUN mkdir -p /app
+COPY ./ .
 RUN npm install
-
-COPY . /usr/src/app
-
-ENV PORT 5000
-EXPOSE $PORT
-CMD [ "npm", "start" ]
+EXPOSE 3000
+ENTRYPOINT npm start
