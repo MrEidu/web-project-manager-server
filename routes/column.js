@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const controller = require('../controllers/columns')
+const controller = require('../controllers/column')
 
 router.get('/:page?', controller.list);
 
