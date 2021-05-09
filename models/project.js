@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const mongoosePaginate = require('mongoose-paginate-v2');
-const projects = require('../controllers/projects');
+const projects = require('../controllers/project');
 const user = require('./user');
 
 const schema = mongoose.Schema({
