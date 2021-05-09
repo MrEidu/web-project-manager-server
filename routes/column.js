@@ -1,9 +1,8 @@
-var express = require('express');
-var router = express.Router();
-var controller = require('../controllers/project');
+const express = require('express');
+const router = express.Router();
+const controller = require('../controllers/column')
 
-/* GET users listing. */
-router.get('/', controller.list);
+router.get('/:page?', controller.list);
 
 router.get('/id/:id', controller.index);
 

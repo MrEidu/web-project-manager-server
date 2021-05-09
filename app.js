@@ -9,7 +9,9 @@ const config = require('config');
 const cors = require('cors');
 
 
-const projectsRouter = require('./routes/projects');
+
+const projectsRouter = require('./routes/project');
+const columnRouter = require('./routes/column');
 const usersRouter = require('./routes/users');
 
 
@@ -38,6 +40,8 @@ app.use(cors());
 
 app.use('/projects', projectsRouter);
 app.use('/users', usersRouter);
+app.use('/column', columnRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
