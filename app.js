@@ -42,6 +42,7 @@ app.use(cors());
 app.use('/projects', projectsRouter);
 app.use('/users', usersRouter);
 app.use('/column', columnRouter);
+app.use('/stories', storiesRouter);
 
 
 // catch 404 and forward to error handler
