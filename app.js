@@ -13,6 +13,7 @@ const cors = require('cors');
 const projectsRouter = require('./routes/project');
 const columnRouter = require('./routes/column');
 const usersRouter = require('./routes/users');
+const storiesRouter = require('./routes/stories');
 
 
 

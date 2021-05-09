@@ -9,10 +9,10 @@ function list(req, res, next) {
     page: page,
     limit: 100
   }, {page: page, limit: 8}).then(project => res.status(200).json({
-    message: res.__('story.findAll.ok'),
+    message: res.__('story.list.ok'),
     objs: stories
   })).catch(error => res.status(500).json({
-    message: res.__('story.findAll.err'),
+    message: res.__('story.list.err'),
     obj: error
   }));
 }
@@ -46,10 +46,10 @@ function create(req, res) {
 function index(req, res) {
   let id = req.params.id;
   Story.findOne({ _id: id }).then(story => res.status(200).json({
-    message: res.__('story.findOne.ok'),
+    message: res.__('story.index.ok'),
     objs: story
   })).catch(error => res.status(500).json({
-    message: res.__('story.findOne.err'),
+    message: res.__('story.index.err'),
      obj: error
   }));
 }
