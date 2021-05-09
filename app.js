@@ -13,6 +13,7 @@ const authRouter = require('./routes/auth');
 const projectsRouter = require('./routes/project');
 const columnRouter = require('./routes/column');
 const usersRouter = require('./routes/users');
+const storiesRouter = require('./routes/stories');
 
 const jwtKey = config.get('secret.key');
 
