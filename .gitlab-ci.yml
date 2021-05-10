@@ -1,15 +1,14 @@
-image: node:latest
-
-cache:
-  paths:
-    - node_modules/
-
-test_async:
+image: docker:latest
+services:
+  - docker:dind
+stages:
+  - build
+  - deploy
+build_image:
+  stage: build
+  variables:
+    IMAGE_TAG:
   script:
-    - npm install
-    - node ./specs/start.js ./specs/async.spec.js
-
-test_db:
-  script:
-    - npm install
-    - node ./specs/start.js ./specs/db-postgres.spec.js
+    - docker login -u gitlab-ci-token -p "CI_JOB_TOKEN $CI_REGISTRY"
+    - docker build --pull -t $IMAGE_TAG -f dockerfile .
+    - docker push $IMAGE_TAG
